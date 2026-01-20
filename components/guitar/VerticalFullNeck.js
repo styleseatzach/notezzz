@@ -10,6 +10,7 @@ import {
   getScaleDegree,
 } from '../../utils/chairSystem';
 import { getChordVoicings } from '../../utils/chordVoicings';
+import FretboardNote from './FretboardNote';
 
 /**
  * VerticalFullNeck - Full fretboard rendered vertically
@@ -406,30 +407,18 @@ const VerticalFullNeck = ({
       const radius = isRoot ? 16 : 14;
 
       return (
-        <G
+        <FretboardNote
           key={`note-${index}`}
+          cx={x}
+          cy={y}
+          radius={radius}
+          fill={noteColors.fill}
+          stroke={noteColors.stroke}
+          strokeWidth={2}
+          label={label}
+          textColor={noteColors.textColor}
           onPress={onNotePress ? () => handleNotePress(pos) : undefined}
-        >
-          <Circle
-            cx={x}
-            cy={y}
-            r={radius}
-            fill={noteColors.fill}
-            stroke={noteColors.stroke}
-            strokeWidth={noteColors.stroke ? 2 : 0}
-          />
-          <SvgText
-            x={x}
-            y={y + 5}
-            fontSize={label.length > 2 ? 10 : 12}
-            fontWeight="600"
-            fontFamily={fontFamilies.body}
-            fill={noteColors.textColor}
-            textAnchor="middle"
-          >
-            {label}
-          </SvgText>
-        </G>
+        />
       );
     });
   };
