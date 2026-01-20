@@ -1,0 +1,218 @@
+{
+  "C Major": {
+    "name": "C Major",
+    "type": "major",
+    "notes": ["C", "D", "E", "F", "G", "A", "B"],
+    "relativeMinor": "A Minor",
+    "camelotKey": "8B",
+    "camelotNumber": 8,
+    "color": "#FFF7E5"
+  },
+  "G Major": {
+    "name": "G Major",
+    "type": "major",
+    "notes": ["G", "A", "B", "C", "D", "E", "F#"],
+    "relativeMinor": "E Minor",
+    "camelotKey": "9B",
+    "camelotNumber": 9,
+    "color": "#FEFFE5"
+  },
+  "D Major": {
+    "name": "D Major",
+    "type": "major",
+    "notes": ["D", "E", "F#", "G", "A", "B", "C#"],
+    "relativeMinor": "B Minor",
+    "camelotKey": "10B",
+    "camelotNumber": 10,
+    "color": "#F5FFE5"
+  },
+  "A Major": {
+    "name": "A Major",
+    "type": "major",
+    "notes": ["A", "B", "C#", "D", "E", "F#", "G#"],
+    "relativeMinor": "F# Minor",
+    "camelotKey": "11B",
+    "camelotNumber": 11,
+    "color": "#ECFFE5"
+  },
+  "E Major": {
+    "name": "E Major",
+    "type": "major",
+    "notes": ["E", "F#", "G#", "A", "B", "C#", "D#"],
+    "relativeMinor": "C# Minor",
+    "camelotKey": "12B",
+    "camelotNumber": 12,
+    "color": "#E5FFE8"
+  },
+  "B Major": {
+    "name": "B Major",
+    "type": "major",
+    "notes": ["B", "C#", "D#", "E", "F#", "G#", "A#"],
+    "relativeMinor": "G# Minor",
+    "camelotKey": "1B",
+    "camelotNumber": 1,
+    "color": "#E5FFF1"
+  },
+  "F# Major": {
+    "name": "F# Major",
+    "type": "major",
+    "notes": ["F#", "G#", "A#", "B", "C#", "D#", "E#"],
+    "relativeMinor": "D# Minor",
+    "camelotKey": "2B",
+    "camelotNumber": 2,
+    "color": "#E5FFFA"
+  },
+  "C# Major": {
+    "name": "C# Major",
+    "type": "major",
+    "notes": ["C#", "D#", "E#", "F#", "G#", "A#", "B#"],
+    "relativeMinor": "A# Minor",
+    "camelotKey": "3B",
+    "camelotNumber": 3,
+    "color": "#E5FBFF"
+  },
+  "Ab Major": {
+    "name": "Ab Major",
+    "type": "major",
+    "notes": ["Ab", "Bb", "C", "Db", "Eb", "F", "G"],
+    "relativeMinor": "F Minor",
+    "camelotKey": "4B",
+    "camelotNumber": 4,
+    "color": "#E5F2FF"
+  },
+  "Eb Major": {
+    "name": "Eb Major",
+    "type": "major",
+    "notes": ["Eb", "F", "G", "Ab", "Bb", "C", "D"],
+    "relativeMinor": "C Minor",
+    "camelotKey": "5B",
+    "camelotNumber": 5,
+    "color": "#E5E9FF"
+  },
+  "Bb Major": {
+    "name": "Bb Major",
+    "type": "major",
+    "notes": ["Bb", "C", "D", "Eb", "F", "G", "A"],
+    "relativeMinor": "G Minor",
+    "camelotKey": "6B",
+    "camelotNumber": 6,
+    "color": "#FFE5E5"
+  },
+  "F Major": {
+    "name": "F Major",
+    "type": "major",
+    "notes": ["F", "G", "A", "Bb", "C", "D", "E"],
+    "relativeMinor": "D Minor",
+    "camelotKey": "7B",
+    "camelotNumber": 7,
+    "color": "#FFEEE5"
+  },
+  "A Minor": {
+    "name": "A Minor",
+    "type": "minor",
+    "notes": ["A", "B", "C", "D", "E", "F", "G"],
+    "relativeMajor": "C Major",
+    "camelotKey": "8A",
+    "camelotNumber": 8,
+    "color": "#FFF7E5"
+  },
+  "E Minor": {
+    "name": "E Minor",
+    "type": "minor",
+    "notes": ["E", "F#", "G", "A", "B", "C", "D"],
+    "relativeMajor": "G Major",
+    "camelotKey": "9A",
+    "camelotNumber": 9,
+    "color": "#FEFFE5"
+  },
+  "B Minor": {
+    "name": "B Minor",
+    "type": "minor",
+    "notes": ["B", "C#", "D", "E", "F#", "G", "A"],
+    "relativeMajor": "D Major",
+    "camelotKey": "10A",
+    "camelotNumber": 10,
+    "color": "#F5FFE5"
+  },
+  "F# Minor": {
+    "name": "F# Minor",
+    "type": "minor",
+    "notes": ["F#", "G#", "A", "B", "C#", "D", "E"],
+    "relativeMajor": "A Major",
+    "camelotKey": "11A",
+    "camelotNumber": 11,
+    "color": "#ECFFE5"
+  },
+  "C# Minor": {
+    "name": "C# Minor",
+    "type": "minor",
+    "notes": ["C#", "D#", "E", "F#", "G#", "A", "B"],
+    "relativeMajor": "E Major",
+    "camelotKey": "12A",
+    "camelotNumber": 12,
+    "color": "#E5FFE8"
+  },
+  "G# Minor": {
+    "name": "G# Minor",
+    "type": "minor",
+    "notes": ["G#", "A#", "B", "C#", "D#", "E", "F#"],
+    "relativeMajor": "B Major",
+    "camelotKey": "1A",
+    "camelotNumber": 1,
+    "color": "#E5FFF1"
+  },
+  "D# Minor": {
+    "name": "D# Minor",
+    "type": "minor",
+    "notes": ["D#", "E#", "F#", "G#", "A#", "B", "C#"],
+    "relativeMajor": "F# Major",
+    "camelotKey": "2A",
+    "camelotNumber": 2,
+    "color": "#E5FFFA"
+  },
+  "A# Minor": {
+    "name": "A# Minor",
+    "type": "minor",
+    "notes": ["A#", "B#", "C#", "D#", "E#", "F#", "G#"],
+    "relativeMajor": "C# Major",
+    "camelotKey": "3A",
+    "camelotNumber": 3,
+    "color": "#E5FBFF"
+  },
+  "F Minor": {
+    "name": "F Minor",
+    "type": "minor",
+    "notes": ["F", "G", "Ab", "Bb", "C", "Db", "Eb"],
+    "relativeMajor": "Ab Major",
+    "camelotKey": "4A",
+    "camelotNumber": 4,
+    "color": "#E5F2FF"
+  },
+  "C Minor": {
+    "name": "C Minor",
+    "type": "minor",
+    "notes": ["C", "D", "Eb", "F", "G", "Ab", "Bb"],
+    "relativeMajor": "Eb Major",
+    "camelotKey": "5A",
+    "camelotNumber": 5,
+    "color": "#E5E9FF"
+  },
+  "G Minor": {
+    "name": "G Minor",
+    "type": "minor",
+    "notes": ["G", "A", "Bb", "C", "D", "Eb", "F"],
+    "relativeMajor": "Bb Major",
+    "camelotKey": "6A",
+    "camelotNumber": 6,
+    "color": "#FFE5E5"
+  },
+  "D Minor": {
+    "name": "D Minor",
+    "type": "minor",
+    "notes": ["D", "E", "F", "G", "A", "Bb", "C"],
+    "relativeMajor": "F Major",
+    "camelotKey": "7A",
+    "camelotNumber": 7,
+    "color": "#FFEEE5"
+  }
+}

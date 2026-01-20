@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "category": "logic-pro",
+    "number": 1,
+    "title": "Getting Started In Logic",
+    "description": "All of them except that one that David played that one time.",
+    "progress": 70,
+    "backgroundColor": "#FEFC63"
+  },
+  {
+    "id": 2,
+    "category": "logic-pro",
+    "number": 2,
+    "title": "Basic EDM Drum Patterns",
+    "description": "Boots and Cats and Cats and Boots",
+    "progress": 70,
+    "backgroundColor": "#C0B4FA"
+  },
+  {
+    "id": 3,
+    "category": "logic-pro",
+    "number": 3,
+    "title": "Mixing Basics",
+    "description": "Learn the fundamentals of mixing your tracks for professional sound.",
+    "progress": 30,
+    "backgroundColor": "#F8CEC1"
+  },
+  {
+    "id": 4,
+    "category": "logic-pro",
+    "number": 4,
+    "title": "Using MIDI Controllers",
+    "description": "Connect and configure your MIDI keyboard and other controllers.",
+    "progress": 0,
+    "backgroundColor": "#E8F1C6"
+  },
+  {
+    "id": 5,
+    "category": "logic-pro",
+    "number": 5,
+    "title": "Mastering Your Track",
+    "description": "Final polish and preparation for distribution.",
+    "progress": 0,
+    "backgroundColor": "#E1EDFF"
+  },
+  {
+    "id": 6,
+    "category": "music-theory",
+    "number": 1,
+    "title": "How Do Notes Work?",
+    "description": "Basically they are specific frequencies that sound good together when you play them.",
+    "progress": 45,
+    "backgroundColor": "#C0B4FA"
+  },
+  {
+    "id": 7,
+    "category": "music-theory",
+    "number": 2,
+    "title": "Understanding Scales",
+    "description": "Major scales, minor scales, and everything in between.",
+    "progress": 20,
+    "backgroundColor": "#E1EDFF"
+  },
+  {
+    "id": 8,
+    "category": "music-theory",
+    "number": 3,
+    "title": "Chord Progressions",
+    "description": "How chords work together to create harmonic movement.",
+    "progress": 0,
+    "backgroundColor": "#FEFC63"
+  },
+  {
+    "id": 9,
+    "category": "music-theory",
+    "number": 4,
+    "title": "The Circle of Fifths",
+    "description": "Understanding key relationships and modulation.",
+    "progress": 0,
+    "backgroundColor": "#E8F1C6"
+  },
+  {
+    "id": 10,
+    "category": "music-theory",
+    "number": 5,
+    "title": "Rhythm and Time Signatures",
+    "description": "From 4/4 to 7/8 and everything in between.",
+    "progress": 0,
+    "backgroundColor": "#F8CEC1"
+  },
+  {
+    "id": 11,
+    "category": "songwriting",
+    "number": 1,
+    "title": "Song Structure Basics",
+    "description": "Verse, chorus, bridge - how to arrange your ideas.",
+    "progress": 60,
+    "backgroundColor": "#FFE8F6"
+  },
+  {
+    "id": 12,
+    "category": "songwriting",
+    "number": 2,
+    "title": "Writing Melodies",
+    "description": "Create memorable and catchy vocal lines.",
+    "progress": 35,
+    "backgroundColor": "#E1EDFF"
+  },
+  {
+    "id": 13,
+    "category": "songwriting",
+    "number": 3,
+    "title": "Lyric Writing Tips",
+    "description": "Tell your story through powerful lyrics.",
+    "progress": 0,
+    "backgroundColor": "#E8F1C6"
+  },
+  {
+    "id": 14,
+    "category": "songwriting",
+    "number": 4,
+    "title": "Creating Hooks",
+    "description": "Make your songs unforgettable with strong hooks.",
+    "progress": 0,
+    "backgroundColor": "#FEFC63"
+  },
+  {
+    "id": 15,
+    "category": "songwriting",
+    "number": 5,
+    "title": "Collaboration Techniques",
+    "description": "Work effectively with other musicians and producers.",
+    "progress": 0,
+    "backgroundColor": "#F8CEC1"
+  }
+]

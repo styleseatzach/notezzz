@@ -1,0 +1,436 @@
+{
+  "C Major": {
+    "name": "C Major",
+    "type": "major",
+    "notes": ["C", "D", "E", "F", "G", "A", "B"],
+    "relativeMinor": "A Minor",
+    "camelotKey": "8B",
+    "camelotNumber": 8,
+    "color": "#FFF7E5",
+    "colorMid": "#E4C478",
+    "chords": [
+      { "degree": "I", "name": "C Major", "notes": ["C", "E", "G"], "type": "major" },
+      { "degree": "ii", "name": "D Minor", "notes": ["D", "F", "A"], "type": "minor" },
+      { "degree": "iii", "name": "E Minor", "notes": ["E", "G", "B"], "type": "minor" },
+      { "degree": "IV", "name": "F Major", "notes": ["F", "A", "C"], "type": "major" },
+      { "degree": "V", "name": "G Major", "notes": ["G", "B", "D"], "type": "major" },
+      { "degree": "vi", "name": "A Minor", "notes": ["A", "C", "E"], "type": "minor" },
+      { "degree": "vii°", "name": "B Diminished", "notes": ["B", "D", "F"], "type": "diminished" }
+    ]
+  },
+  "G Major": {
+    "name": "G Major",
+    "type": "major",
+    "notes": ["G", "A", "B", "C", "D", "E", "F#"],
+    "relativeMinor": "E Minor",
+    "camelotKey": "9B",
+    "camelotNumber": 9,
+    "color": "#FEFFE5",
+    "chords": [
+      { "degree": "I", "name": "G Major", "notes": ["G", "B", "D"], "type": "major" },
+      { "degree": "ii", "name": "A Minor", "notes": ["A", "C", "E"], "type": "minor" },
+      { "degree": "iii", "name": "B Minor", "notes": ["B", "D", "F#"], "type": "minor" },
+      { "degree": "IV", "name": "C Major", "notes": ["C", "E", "G"], "type": "major" },
+      { "degree": "V", "name": "D Major", "notes": ["D", "F#", "A"], "type": "major" },
+      { "degree": "vi", "name": "E Minor", "notes": ["E", "G", "B"], "type": "minor" },
+      { "degree": "vii°", "name": "F# Diminished", "notes": ["F#", "A", "C"], "type": "diminished" }
+    ]
+  },
+  "D Major": {
+    "name": "D Major",
+    "type": "major",
+    "notes": ["D", "E", "F#", "G", "A", "B", "C#"],
+    "relativeMinor": "B Minor",
+    "camelotKey": "10B",
+    "camelotNumber": 10,
+    "color": "#F5FFE5",
+    "chords": [
+      { "degree": "I", "name": "D Major", "notes": ["D", "F#", "A"], "type": "major" },
+      { "degree": "ii", "name": "E Minor", "notes": ["E", "G", "B"], "type": "minor" },
+      { "degree": "iii", "name": "F# Minor", "notes": ["F#", "A", "C#"], "type": "minor" },
+      { "degree": "IV", "name": "G Major", "notes": ["G", "B", "D"], "type": "major" },
+      { "degree": "V", "name": "A Major", "notes": ["A", "C#", "E"], "type": "major" },
+      { "degree": "vi", "name": "B Minor", "notes": ["B", "D", "F#"], "type": "minor" },
+      { "degree": "vii°", "name": "C# Diminished", "notes": ["C#", "E", "G"], "type": "diminished" }
+    ]
+  },
+  "A Major": {
+    "name": "A Major",
+    "type": "major",
+    "notes": ["A", "B", "C#", "D", "E", "F#", "G#"],
+    "relativeMinor": "F# Minor",
+    "camelotKey": "11B",
+    "camelotNumber": 11,
+    "color": "#ECFFE5",
+    "chords": [
+      { "degree": "I", "name": "A Major", "notes": ["A", "C#", "E"], "type": "major" },
+      { "degree": "ii", "name": "B Minor", "notes": ["B", "D", "F#"], "type": "minor" },
+      { "degree": "iii", "name": "C# Minor", "notes": ["C#", "E", "G#"], "type": "minor" },
+      { "degree": "IV", "name": "D Major", "notes": ["D", "F#", "A"], "type": "major" },
+      { "degree": "V", "name": "E Major", "notes": ["E", "G#", "B"], "type": "major" },
+      { "degree": "vi", "name": "F# Minor", "notes": ["F#", "A", "C#"], "type": "minor" },
+      { "degree": "vii°", "name": "G# Diminished", "notes": ["G#", "B", "D"], "type": "diminished" }
+    ]
+  },
+  "E Major": {
+    "name": "E Major",
+    "type": "major",
+    "notes": ["E", "F#", "G#", "A", "B", "C#", "D#"],
+    "relativeMinor": "C# Minor",
+    "camelotKey": "12B",
+    "camelotNumber": 12,
+    "color": "#E5FFE8",
+    "chords": [
+      { "degree": "I", "name": "E Major", "notes": ["E", "G#", "B"], "type": "major" },
+      { "degree": "ii", "name": "F# Minor", "notes": ["F#", "A", "C#"], "type": "minor" },
+      { "degree": "iii", "name": "G# Minor", "notes": ["G#", "B", "D#"], "type": "minor" },
+      { "degree": "IV", "name": "A Major", "notes": ["A", "C#", "E"], "type": "major" },
+      { "degree": "V", "name": "B Major", "notes": ["B", "D#", "F#"], "type": "major" },
+      { "degree": "vi", "name": "C# Minor", "notes": ["C#", "E", "G#"], "type": "minor" },
+      { "degree": "vii°", "name": "D# Diminished", "notes": ["D#", "F#", "A"], "type": "diminished" }
+    ]
+  },
+  "B Major": {
+    "name": "B Major",
+    "type": "major",
+    "notes": ["B", "C#", "D#", "E", "F#", "G#", "A#"],
+    "relativeMinor": "G# Minor",
+    "camelotKey": "1B",
+    "camelotNumber": 1,
+    "color": "#E5FFF1",
+    "chords": [
+      { "degree": "I", "name": "B Major", "notes": ["B", "D#", "F#"], "type": "major" },
+      { "degree": "ii", "name": "C# Minor", "notes": ["C#", "E", "G#"], "type": "minor" },
+      { "degree": "iii", "name": "D# Minor", "notes": ["D#", "F#", "A#"], "type": "minor" },
+      { "degree": "IV", "name": "E Major", "notes": ["E", "G#", "B"], "type": "major" },
+      { "degree": "V", "name": "F# Major", "notes": ["F#", "A#", "C#"], "type": "major" },
+      { "degree": "vi", "name": "G# Minor", "notes": ["G#", "B", "D#"], "type": "minor" },
+      { "degree": "vii°", "name": "A# Diminished", "notes": ["A#", "C#", "E"], "type": "diminished" }
+    ]
+  },
+  "F# Major": {
+    "name": "F# Major",
+    "type": "major",
+    "notes": ["F#", "G#", "A#", "B", "C#", "D#", "F"],
+    "relativeMinor": "D# Minor",
+    "camelotKey": "2B",
+    "camelotNumber": 2,
+    "color": "#E5FFFA",
+    "chords": [
+      { "degree": "I", "name": "F# Major", "notes": ["F#", "A#", "C#"], "type": "major" },
+      { "degree": "ii", "name": "G# Minor", "notes": ["G#", "B", "D#"], "type": "minor" },
+      { "degree": "iii", "name": "A# Minor", "notes": ["A#", "C#", "F"], "type": "minor" },
+      { "degree": "IV", "name": "B Major", "notes": ["B", "D#", "F#"], "type": "major" },
+      { "degree": "V", "name": "C# Major", "notes": ["C#", "F", "G#"], "type": "major" },
+      { "degree": "vi", "name": "D# Minor", "notes": ["D#", "F#", "A#"], "type": "minor" },
+      { "degree": "vii°", "name": "F Diminished", "notes": ["F", "G#", "B"], "type": "diminished" }
+    ]
+  },
+  "C# Major": {
+    "name": "C# Major",
+    "type": "major",
+    "notes": ["C#", "D#", "F", "F#", "G#", "A#", "C"],
+    "relativeMinor": "A# Minor",
+    "camelotKey": "3B",
+    "camelotNumber": 3,
+    "color": "#E5FBFF",
+    "chords": [
+      { "degree": "I", "name": "C# Major", "notes": ["C#", "F", "G#"], "type": "major" },
+      { "degree": "ii", "name": "D# Minor", "notes": ["D#", "F#", "A#"], "type": "minor" },
+      { "degree": "iii", "name": "F Minor", "notes": ["F", "G#", "C"], "type": "minor" },
+      { "degree": "IV", "name": "F# Major", "notes": ["F#", "A#", "C#"], "type": "major" },
+      { "degree": "V", "name": "G# Major", "notes": ["G#", "C", "D#"], "type": "major" },
+      { "degree": "vi", "name": "A# Minor", "notes": ["A#", "C#", "F"], "type": "minor" },
+      { "degree": "vii°", "name": "C Diminished", "notes": ["C", "D#", "F#"], "type": "diminished" }
+    ]
+  },
+  "G# Major": {
+    "name": "G# Major",
+    "type": "major",
+    "notes": ["G#", "A#", "C", "C#", "D#", "F", "G"],
+    "relativeMinor": "F Minor",
+    "camelotKey": "4B",
+    "camelotNumber": 4,
+    "color": "#E5F2FF",
+    "chords": [
+      { "degree": "I", "name": "G# Major", "notes": ["G#", "C", "D#"], "type": "major" },
+      { "degree": "ii", "name": "A# Minor", "notes": ["A#", "C#", "F"], "type": "minor" },
+      { "degree": "iii", "name": "C Minor", "notes": ["C", "D#", "G"], "type": "minor" },
+      { "degree": "IV", "name": "C# Major", "notes": ["C#", "F", "G#"], "type": "major" },
+      { "degree": "V", "name": "D# Major", "notes": ["D#", "G", "A#"], "type": "major" },
+      { "degree": "vi", "name": "F Minor", "notes": ["F", "G#", "C"], "type": "minor" },
+      { "degree": "vii°", "name": "G Diminished", "notes": ["G", "A#", "C#"], "type": "diminished" }
+    ]
+  },
+  "D# Major": {
+    "name": "D# Major",
+    "type": "major",
+    "notes": ["D#", "F", "G", "G#", "A#", "C", "D"],
+    "relativeMinor": "C Minor",
+    "camelotKey": "5B",
+    "camelotNumber": 5,
+    "color": "#E5E9FF",
+    "chords": [
+      { "degree": "I", "name": "D# Major", "notes": ["D#", "G", "A#"], "type": "major" },
+      { "degree": "ii", "name": "F Minor", "notes": ["F", "G#", "C"], "type": "minor" },
+      { "degree": "iii", "name": "G Minor", "notes": ["G", "A#", "D"], "type": "minor" },
+      { "degree": "IV", "name": "G# Major", "notes": ["G#", "C", "D#"], "type": "major" },
+      { "degree": "V", "name": "A# Major", "notes": ["A#", "D", "F"], "type": "major" },
+      { "degree": "vi", "name": "C Minor", "notes": ["C", "D#", "G"], "type": "minor" },
+      { "degree": "vii°", "name": "D Diminished", "notes": ["D", "F", "G#"], "type": "diminished" }
+    ]
+  },
+  "A# Major": {
+    "name": "A# Major",
+    "type": "major",
+    "notes": ["A#", "C", "D", "D#", "F", "G", "A"],
+    "relativeMinor": "G Minor",
+    "camelotKey": "6B",
+    "camelotNumber": 6,
+    "color": "#FFE5E5",
+    "chords": [
+      { "degree": "I", "name": "A# Major", "notes": ["A#", "D", "F"], "type": "major" },
+      { "degree": "ii", "name": "C Minor", "notes": ["C", "D#", "G"], "type": "minor" },
+      { "degree": "iii", "name": "D Minor", "notes": ["D", "F", "A"], "type": "minor" },
+      { "degree": "IV", "name": "D# Major", "notes": ["D#", "G", "A#"], "type": "major" },
+      { "degree": "V", "name": "F Major", "notes": ["F", "A", "C"], "type": "major" },
+      { "degree": "vi", "name": "G Minor", "notes": ["G", "A#", "D"], "type": "minor" },
+      { "degree": "vii°", "name": "A Diminished", "notes": ["A", "C", "D#"], "type": "diminished" }
+    ]
+  },
+  "F Major": {
+    "name": "F Major",
+    "type": "major",
+    "notes": ["F", "G", "A", "A#", "C", "D", "E"],
+    "relativeMinor": "D Minor",
+    "camelotKey": "7B",
+    "camelotNumber": 7,
+    "color": "#FFEEE5",
+    "chords": [
+      { "degree": "I", "name": "F Major", "notes": ["F", "A", "C"], "type": "major" },
+      { "degree": "ii", "name": "G Minor", "notes": ["G", "A#", "D"], "type": "minor" },
+      { "degree": "iii", "name": "A Minor", "notes": ["A", "C", "E"], "type": "minor" },
+      { "degree": "IV", "name": "A# Major", "notes": ["A#", "D", "F"], "type": "major" },
+      { "degree": "V", "name": "C Major", "notes": ["C", "E", "G"], "type": "major" },
+      { "degree": "vi", "name": "D Minor", "notes": ["D", "F", "A"], "type": "minor" },
+      { "degree": "vii°", "name": "E Diminished", "notes": ["E", "G", "A#"], "type": "diminished" }
+    ]
+  },
+  "A Minor": {
+    "name": "A Minor",
+    "type": "minor",
+    "notes": ["A", "B", "C", "D", "E", "F", "G"],
+    "relativeMajor": "C Major",
+    "camelotKey": "8A",
+    "camelotNumber": 8,
+    "color": "#FFF7E5",
+    "colorMid": "#E4C478",
+    "chords": [
+      { "degree": "i", "name": "A Minor", "notes": ["A", "C", "E"], "type": "minor" },
+      { "degree": "ii°", "name": "B Diminished", "notes": ["B", "D", "F"], "type": "diminished" },
+      { "degree": "III", "name": "C Major", "notes": ["C", "E", "G"], "type": "major" },
+      { "degree": "iv", "name": "D Minor", "notes": ["D", "F", "A"], "type": "minor" },
+      { "degree": "v", "name": "E Minor", "notes": ["E", "G", "B"], "type": "minor" },
+      { "degree": "VI", "name": "F Major", "notes": ["F", "A", "C"], "type": "major" },
+      { "degree": "VII", "name": "G Major", "notes": ["G", "B", "D"], "type": "major" }
+    ]
+  },
+  "E Minor": {
+    "name": "E Minor",
+    "type": "minor",
+    "notes": ["E", "F#", "G", "A", "B", "C", "D"],
+    "relativeMajor": "G Major",
+    "camelotKey": "9A",
+    "camelotNumber": 9,
+    "color": "#FEFFE5",
+    "chords": [
+      { "degree": "i", "name": "E Minor", "notes": ["E", "G", "B"], "type": "minor" },
+      { "degree": "ii°", "name": "F# Diminished", "notes": ["F#", "A", "C"], "type": "diminished" },
+      { "degree": "III", "name": "G Major", "notes": ["G", "B", "D"], "type": "major" },
+      { "degree": "iv", "name": "A Minor", "notes": ["A", "C", "E"], "type": "minor" },
+      { "degree": "v", "name": "B Minor", "notes": ["B", "D", "F#"], "type": "minor" },
+      { "degree": "VI", "name": "C Major", "notes": ["C", "E", "G"], "type": "major" },
+      { "degree": "VII", "name": "D Major", "notes": ["D", "F#", "A"], "type": "major" }
+    ]
+  },
+  "B Minor": {
+    "name": "B Minor",
+    "type": "minor",
+    "notes": ["B", "C#", "D", "E", "F#", "G", "A"],
+    "relativeMajor": "D Major",
+    "camelotKey": "10A",
+    "camelotNumber": 10,
+    "color": "#F5FFE5",
+    "chords": [
+      { "degree": "i", "name": "B Minor", "notes": ["B", "D", "F#"], "type": "minor" },
+      { "degree": "ii°", "name": "C# Diminished", "notes": ["C#", "E", "G"], "type": "diminished" },
+      { "degree": "III", "name": "D Major", "notes": ["D", "F#", "A"], "type": "major" },
+      { "degree": "iv", "name": "E Minor", "notes": ["E", "G", "B"], "type": "minor" },
+      { "degree": "v", "name": "F# Minor", "notes": ["F#", "A", "C#"], "type": "minor" },
+      { "degree": "VI", "name": "G Major", "notes": ["G", "B", "D"], "type": "major" },
+      { "degree": "VII", "name": "A Major", "notes": ["A", "C#", "E"], "type": "major" }
+    ]
+  },
+  "F# Minor": {
+    "name": "F# Minor",
+    "type": "minor",
+    "notes": ["F#", "G#", "A", "B", "C#", "D", "E"],
+    "relativeMajor": "A Major",
+    "camelotKey": "11A",
+    "camelotNumber": 11,
+    "color": "#ECFFE5",
+    "chords": [
+      { "degree": "i", "name": "F# Minor", "notes": ["F#", "A", "C#"], "type": "minor" },
+      { "degree": "ii°", "name": "G# Diminished", "notes": ["G#", "B", "D"], "type": "diminished" },
+      { "degree": "III", "name": "A Major", "notes": ["A", "C#", "E"], "type": "major" },
+      { "degree": "iv", "name": "B Minor", "notes": ["B", "D", "F#"], "type": "minor" },
+      { "degree": "v", "name": "C# Minor", "notes": ["C#", "E", "G#"], "type": "minor" },
+      { "degree": "VI", "name": "D Major", "notes": ["D", "F#", "A"], "type": "major" },
+      { "degree": "VII", "name": "E Major", "notes": ["E", "G#", "B"], "type": "major" }
+    ]
+  },
+  "C# Minor": {
+    "name": "C# Minor",
+    "type": "minor",
+    "notes": ["C#", "D#", "E", "F#", "G#", "A", "B"],
+    "relativeMajor": "E Major",
+    "camelotKey": "12A",
+    "camelotNumber": 12,
+    "color": "#E5FFE8",
+    "chords": [
+      { "degree": "i", "name": "C# Minor", "notes": ["C#", "E", "G#"], "type": "minor" },
+      { "degree": "ii°", "name": "D# Diminished", "notes": ["D#", "F#", "A"], "type": "diminished" },
+      { "degree": "III", "name": "E Major", "notes": ["E", "G#", "B"], "type": "major" },
+      { "degree": "iv", "name": "F# Minor", "notes": ["F#", "A", "C#"], "type": "minor" },
+      { "degree": "v", "name": "G# Minor", "notes": ["G#", "B", "D#"], "type": "minor" },
+      { "degree": "VI", "name": "A Major", "notes": ["A", "C#", "E"], "type": "major" },
+      { "degree": "VII", "name": "B Major", "notes": ["B", "D#", "F#"], "type": "major" }
+    ]
+  },
+  "G# Minor": {
+    "name": "G# Minor",
+    "type": "minor",
+    "notes": ["G#", "A#", "B", "C#", "D#", "E", "F#"],
+    "relativeMajor": "B Major",
+    "camelotKey": "1A",
+    "camelotNumber": 1,
+    "color": "#E5FFF1",
+    "chords": [
+      { "degree": "i", "name": "G# Minor", "notes": ["G#", "B", "D#"], "type": "minor" },
+      { "degree": "ii°", "name": "A# Diminished", "notes": ["A#", "C#", "E"], "type": "diminished" },
+      { "degree": "III", "name": "B Major", "notes": ["B", "D#", "F#"], "type": "major" },
+      { "degree": "iv", "name": "C# Minor", "notes": ["C#", "E", "G#"], "type": "minor" },
+      { "degree": "v", "name": "D# Minor", "notes": ["D#", "F#", "A#"], "type": "minor" },
+      { "degree": "VI", "name": "E Major", "notes": ["E", "G#", "B"], "type": "major" },
+      { "degree": "VII", "name": "F# Major", "notes": ["F#", "A#", "C#"], "type": "major" }
+    ]
+  },
+  "D# Minor": {
+    "name": "D# Minor",
+    "type": "minor",
+    "notes": ["D#", "F", "F#", "G#", "A#", "B", "C#"],
+    "relativeMajor": "F# Major",
+    "camelotKey": "2A",
+    "camelotNumber": 2,
+    "color": "#E5FFFA",
+    "chords": [
+      { "degree": "i", "name": "D# Minor", "notes": ["D#", "F#", "A#"], "type": "minor" },
+      { "degree": "ii°", "name": "F Diminished", "notes": ["F", "G#", "B"], "type": "diminished" },
+      { "degree": "III", "name": "F# Major", "notes": ["F#", "A#", "C#"], "type": "major" },
+      { "degree": "iv", "name": "G# Minor", "notes": ["G#", "B", "D#"], "type": "minor" },
+      { "degree": "v", "name": "A# Minor", "notes": ["A#", "C#", "F"], "type": "minor" },
+      { "degree": "VI", "name": "B Major", "notes": ["B", "D#", "F#"], "type": "major" },
+      { "degree": "VII", "name": "C# Major", "notes": ["C#", "F", "G#"], "type": "major" }
+    ]
+  },
+  "A# Minor": {
+    "name": "A# Minor",
+    "type": "minor",
+    "notes": ["A#", "C", "C#", "D#", "F", "F#", "G#"],
+    "relativeMajor": "C# Major",
+    "camelotKey": "3A",
+    "camelotNumber": 3,
+    "color": "#E5FBFF",
+    "chords": [
+      { "degree": "i", "name": "A# Minor", "notes": ["A#", "C#", "F"], "type": "minor" },
+      { "degree": "ii°", "name": "C Diminished", "notes": ["C", "D#", "F#"], "type": "diminished" },
+      { "degree": "III", "name": "C# Major", "notes": ["C#", "F", "G#"], "type": "major" },
+      { "degree": "iv", "name": "D# Minor", "notes": ["D#", "F#", "A#"], "type": "minor" },
+      { "degree": "v", "name": "F Minor", "notes": ["F", "G#", "C"], "type": "minor" },
+      { "degree": "VI", "name": "F# Major", "notes": ["F#", "A#", "C#"], "type": "major" },
+      { "degree": "VII", "name": "G# Major", "notes": ["G#", "C", "D#"], "type": "major" }
+    ]
+  },
+  "F Minor": {
+    "name": "F Minor",
+    "type": "minor",
+    "notes": ["F", "G", "G#", "A#", "C", "C#", "D#"],
+    "relativeMajor": "G# Major",
+    "camelotKey": "4A",
+    "camelotNumber": 4,
+    "color": "#E5F2FF",
+    "chords": [
+      { "degree": "i", "name": "F Minor", "notes": ["F", "G#", "C"], "type": "minor" },
+      { "degree": "ii°", "name": "G Diminished", "notes": ["G", "A#", "C#"], "type": "diminished" },
+      { "degree": "III", "name": "G# Major", "notes": ["G#", "C", "D#"], "type": "major" },
+      { "degree": "iv", "name": "A# Minor", "notes": ["A#", "C#", "F"], "type": "minor" },
+      { "degree": "v", "name": "C Minor", "notes": ["C", "D#", "G"], "type": "minor" },
+      { "degree": "VI", "name": "C# Major", "notes": ["C#", "F", "G#"], "type": "major" },
+      { "degree": "VII", "name": "D# Major", "notes": ["D#", "G", "A#"], "type": "major" }
+    ]
+  },
+  "C Minor": {
+    "name": "C Minor",
+    "type": "minor",
+    "notes": ["C", "D", "D#", "F", "G", "G#", "A#"],
+    "relativeMajor": "D# Major",
+    "camelotKey": "5A",
+    "camelotNumber": 5,
+    "color": "#E5E9FF",
+    "chords": [
+      { "degree": "i", "name": "C Minor", "notes": ["C", "D#", "G"], "type": "minor" },
+      { "degree": "ii°", "name": "D Diminished", "notes": ["D", "F", "G#"], "type": "diminished" },
+      { "degree": "III", "name": "D# Major", "notes": ["D#", "G", "A#"], "type": "major" },
+      { "degree": "iv", "name": "F Minor", "notes": ["F", "G#", "C"], "type": "minor" },
+      { "degree": "v", "name": "G Minor", "notes": ["G", "A#", "D"], "type": "minor" },
+      { "degree": "VI", "name": "G# Major", "notes": ["G#", "C", "D#"], "type": "major" },
+      { "degree": "VII", "name": "A# Major", "notes": ["A#", "D", "F"], "type": "major" }
+    ]
+  },
+  "G Minor": {
+    "name": "G Minor",
+    "type": "minor",
+    "notes": ["G", "A", "A#", "C", "D", "D#", "F"],
+    "relativeMajor": "A# Major",
+    "camelotKey": "6A",
+    "camelotNumber": 6,
+    "color": "#FFE5E5",
+    "chords": [
+      { "degree": "i", "name": "G Minor", "notes": ["G", "A#", "D"], "type": "minor" },
+      { "degree": "ii°", "name": "A Diminished", "notes": ["A", "C", "D#"], "type": "diminished" },
+      { "degree": "III", "name": "A# Major", "notes": ["A#", "D", "F"], "type": "major" },
+      { "degree": "iv", "name": "C Minor", "notes": ["C", "D#", "G"], "type": "minor" },
+      { "degree": "v", "name": "D Minor", "notes": ["D", "F", "A"], "type": "minor" },
+      { "degree": "VI", "name": "D# Major", "notes": ["D#", "G", "A#"], "type": "major" },
+      { "degree": "VII", "name": "F Major", "notes": ["F", "A", "C"], "type": "major" }
+    ]
+  },
+  "D Minor": {
+    "name": "D Minor",
+    "type": "minor",
+    "notes": ["D", "E", "F", "G", "A", "A#", "C"],
+    "relativeMajor": "F Major",
+    "camelotKey": "7A",
+    "camelotNumber": 7,
+    "color": "#FFEEE5",
+    "chords": [
+      { "degree": "i", "name": "D Minor", "notes": ["D", "F", "A"], "type": "minor" },
+      { "degree": "ii°", "name": "E Diminished", "notes": ["E", "G", "A#"], "type": "diminished" },
+      { "degree": "III", "name": "F Major", "notes": ["F", "A", "C"], "type": "major" },
+      { "degree": "iv", "name": "G Minor", "notes": ["G", "A#", "D"], "type": "minor" },
+      { "degree": "v", "name": "A Minor", "notes": ["A", "C", "E"], "type": "minor" },
+      { "degree": "VI", "name": "A# Major", "notes": ["A#", "D", "F"], "type": "major" },
+      { "degree": "VII", "name": "C Major", "notes": ["C", "E", "G"], "type": "major" }
+    ]
+  }
+}
