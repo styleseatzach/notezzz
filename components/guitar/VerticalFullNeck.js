@@ -9,6 +9,7 @@ import {
   getScalePattern,
   getScaleDegree,
 } from '../../utils/chairSystem';
+import { getChordVoicings } from '../../utils/chordVoicings';
 
 /**
  * VerticalFullNeck - Full fretboard rendered vertically
@@ -20,12 +21,16 @@ import {
  * @param {string} props.labelMode - 'letters' | 'majorIntervals' | 'minorIntervals'
  * @param {string} props.camelotNumber - Camelot number for color theming
  * @param {number} props.maxFrets - Maximum frets to show (default 24)
+ * @param {Function} props.onNotePress - Callback when a note is pressed (note, fret, string, chordInfo)
+ * @param {Array} props.chords - Array of chord objects from the key data
  */
 const VerticalFullNeck = ({
   scale = { root: 'G', type: 'major', extended: false },
   labelMode = 'letters',
   camelotNumber = null,
   maxFrets = 24,
+  onNotePress = null,
+  chords = [],
 }) => {
   const numFrets = maxFrets;
   const numStrings = 6;
@@ -253,6 +258,140 @@ const VerticalFullNeck = ({
     return markers;
   };
 
+  // Find a chord voicing that uses the given note at the given fret/string position
+  const findChordWithVoicingAtPosition = (note, fret, string) => {
+    if (!chords || chords.length === 0) return null;
+
+    // Normalize the note for comparison
+    const normalizedNote = note.replace('♯', '#').replace('♭', 'b');
+
+    // Helper to check if notes match (including enharmonic equivalents)
+    const notesMatch = (n1, n2) => {
+      const norm1 = n1.replace('♯', '#').replace('♭', 'b');
+      const norm2 = n2.replace('♯', '#').replace('♭', 'b');
+      if (norm1 === norm2) return true;
+      const enharmonics = {
+        'C#': 'Db', 'Db': 'C#',
+        'D#': 'Eb', 'Eb': 'D#',
+        'F#': 'Gb', 'Gb': 'F#',
+        'G#': 'Ab', 'Ab': 'G#',
+        'A#': 'Bb', 'Bb': 'A#',
+      };
+      return enharmonics[norm1] === norm2;
+    };
+
+    // PRIORITY 1: Find a chord where this note is the ROOT and has a voicing using this exact fret/string
+    for (const chord of chords) {
+      // Check if this note is the ROOT of the chord (first note in the chord.notes array)
+      const isRoot = notesMatch(chord.notes[0], normalizedNote);
+      if (!isRoot) continue;
+
+      // Get voicings for this chord
+      const voicings = getChordVoicings(chord.notes[0], chord.type);
+
+      // Find a voicing that uses this fret on this string
+      for (let vIndex = 0; vIndex < voicings.length; vIndex++) {
+        const voicing = voicings[vIndex];
+        const voicingFret = voicing.frets[string];
+
+        // Check if this voicing uses the target fret on this string
+        if (voicingFret === fret) {
+          return { chord, voicingIndex: vIndex };
+        }
+      }
+    }
+
+    // PRIORITY 2: Find a chord where this note is the ROOT, with closest voicing
+    for (const chord of chords) {
+      const isRoot = notesMatch(chord.notes[0], normalizedNote);
+      if (!isRoot) continue;
+
+      const voicings = getChordVoicings(chord.notes[0], chord.type);
+
+      // Find the voicing closest to this fret
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      for (let vIndex = 0; vIndex < voicings.length; vIndex++) {
+        const voicing = voicings[vIndex];
+        const playedFrets = voicing.frets.filter(f => f > 0);
+        if (playedFrets.length > 0) {
+          const avgFret = playedFrets.reduce((a, b) => a + b, 0) / playedFrets.length;
+          const distance = Math.abs(avgFret - fret);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = vIndex;
+          }
+        }
+      }
+
+      return { chord, voicingIndex: closestIndex };
+    }
+
+    // PRIORITY 3 (Fallback): Find any chord containing this note, with exact fret match
+    for (const chord of chords) {
+      const noteInChord = chord.notes.some(n => notesMatch(n, normalizedNote));
+      if (!noteInChord) continue;
+
+      const voicings = getChordVoicings(chord.notes[0], chord.type);
+
+      // Find a voicing that uses this fret on this string
+      for (let vIndex = 0; vIndex < voicings.length; vIndex++) {
+        const voicing = voicings[vIndex];
+        const voicingFret = voicing.frets[string];
+
+        if (voicingFret === fret) {
+          return { chord, voicingIndex: vIndex };
+        }
+      }
+    }
+
+    // PRIORITY 4 (Last Resort): Find any chord containing this note, with closest voicing
+    for (const chord of chords) {
+      const noteInChord = chord.notes.some(n => notesMatch(n, normalizedNote));
+      if (!noteInChord) continue;
+
+      const voicings = getChordVoicings(chord.notes[0], chord.type);
+
+      // Find the voicing closest to this fret
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+
+      for (let vIndex = 0; vIndex < voicings.length; vIndex++) {
+        const voicing = voicings[vIndex];
+        const playedFrets = voicing.frets.filter(f => f > 0);
+        if (playedFrets.length > 0) {
+          const avgFret = playedFrets.reduce((a, b) => a + b, 0) / playedFrets.length;
+          const distance = Math.abs(avgFret - fret);
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestIndex = vIndex;
+          }
+        }
+      }
+
+      return { chord, voicingIndex: closestIndex };
+    }
+
+    return null;
+  };
+
+  // Handle note press
+  const handleNotePress = (pos) => {
+    if (!onNotePress) return;
+
+    const result = findChordWithVoicingAtPosition(pos.note, pos.fret, pos.string);
+    onNotePress({
+      note: pos.note,
+      fret: pos.fret,
+      string: pos.string,
+      interval: pos.interval,
+      scaleDegree: pos.scaleDegree,
+      chord: result?.chord || null,
+      voicingIndex: result?.voicingIndex || 0,
+    });
+  };
+
   // Render scale notes
   const renderScaleNotes = () => {
     return pattern.map((pos, index) => {
@@ -267,7 +406,10 @@ const VerticalFullNeck = ({
       const radius = isRoot ? 16 : 14;
 
       return (
-        <G key={`note-${index}`}>
+        <G
+          key={`note-${index}`}
+          onPress={onNotePress ? () => handleNotePress(pos) : undefined}
+        >
           <Circle
             cx={x}
             cy={y}

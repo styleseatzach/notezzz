@@ -110,17 +110,17 @@ const ChordBox = ({
     return null;
   };
 
-  // Render position number
+  // Render position number (fret number on left side)
   const renderPosition = () => {
     if (showPosition) {
       return (
         <SvgText
           x={8}
-          y={getFretY(0.5) + 4}
-          fontSize={10}
-          fontWeight="500"
+          y={getFretY(0.5) + 5}
+          fontSize={12}
+          fontWeight="700"
           fontFamily={fontFamilies.body}
-          fill={colors.grey600}
+          fill={colors.grey700}
           textAnchor="middle"
         >
           {baseFret}

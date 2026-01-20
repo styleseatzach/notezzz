@@ -7,6 +7,7 @@ import PianoRoll from '../piano/PianoRoll';
 import { VerticalFullNeck } from '../guitar';
 import InstrumentToggle from '../ui/InstrumentToggle';
 import ChordDetailCard from '../cards/ChordDetailCard';
+import ChordPopup from '../ui/ChordPopup';
 import CamelotWheelIcon from '../icons/CamelotWheelIcon';
 import CloseIcon from '../icons/CloseIcon';
 import ZMLogo from '../shapes/ZMLogo';
@@ -18,10 +19,25 @@ const KeyDetailScreen = ({
   onCamelotWheelPress,
 }) => {
   const [activeInstrument, setActiveInstrument] = useState('piano');
+  const [selectedNote, setSelectedNote] = useState(null);
+  const [showChordPopup, setShowChordPopup] = useState(false);
 
   if (!keyData) {
     return null;
   }
+
+  // Handle note press on the fretboard
+  const handleNotePress = (noteInfo) => {
+    if (noteInfo.chord) {
+      setSelectedNote(noteInfo);
+      setShowChordPopup(true);
+    }
+  };
+
+  const handleClosePopup = () => {
+    setShowChordPopup(false);
+    setSelectedNote(null);
+  };
 
   const { name, notes, relativeMinor, relativeMajor, camelotKey, color, colorMid, chords, type, camelotNumber } = keyData;
   const relativeKey = type === 'major' ? relativeMinor : relativeMajor;
@@ -107,6 +123,8 @@ const KeyDetailScreen = ({
                   labelMode="letters"
                   camelotNumber={camelotNumber.toString()}
                   maxFrets={24}
+                  onNotePress={handleNotePress}
+                  chords={chords}
                 />
               </View>
             )}
@@ -141,6 +159,16 @@ const KeyDetailScreen = ({
           <CloseIcon width={24} height={24} fill={colors.black} />
         </TouchableOpacity>
       </View>
+
+      {/* Chord Popup Modal */}
+      <ChordPopup
+        visible={showChordPopup}
+        onClose={handleClosePopup}
+        noteInfo={selectedNote}
+        camelotNumber={camelotNumber}
+        keyColor={color}
+        scaleType={type}
+      />
     </View>
   );
 };
