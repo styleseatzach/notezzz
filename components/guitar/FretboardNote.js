@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Platform } from 'react-native';
 import { G, Circle, Text as SvgText } from 'react-native-svg';
 import { fontFamilies } from '../../styles/typography';
 
 /**
  * FretboardNote - Individual note marker on guitar fretboard
  * Displays a note with hover/press state animation (3% size increase)
+ * Supports both hover (web) and press (mobile) interactions
  *
  * @param {Object} props
  * @param {number} props.cx - Center X coordinate
@@ -28,28 +30,36 @@ const FretboardNote = ({
   textColor,
   onPress,
 }) => {
-  const [isPressed, setIsPressed] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
-  // Calculate scaled radius (3% increase when pressed)
-  const scaledRadius = isPressed ? radius * 1.03 : radius;
+  // Calculate scaled radius (3% increase when hovered/pressed)
+  const scaledRadius = isHovered ? radius * 1.03 : radius;
 
   // Calculate font size based on label length
   const fontSize = label.length > 2 ? 10 : 12;
 
-  const handlePressIn = () => {
-    setIsPressed(true);
+  const handleInteractionStart = () => {
+    setIsHovered(true);
   };
 
-  const handlePressOut = () => {
-    setIsPressed(false);
+  const handleInteractionEnd = () => {
+    setIsHovered(false);
+  };
+
+  // Props for the G element - includes both hover and press events
+  const interactionProps = {
+    onPress,
+    onPressIn: handleInteractionStart,
+    onPressOut: handleInteractionEnd,
+    // Web-specific hover events
+    ...(Platform.OS === 'web' && {
+      onMouseEnter: handleInteractionStart,
+      onMouseLeave: handleInteractionEnd,
+    }),
   };
 
   return (
-    <G
-      onPress={onPress}
-      onPressIn={handlePressIn}
-      onPressOut={handlePressOut}
-    >
+    <G {...interactionProps}>
       <Circle
         cx={cx}
         cy={cy}
