@@ -1,9 +1,10 @@
 // Font Families
+// Using system fonts with proper fallbacks for cross-platform consistency
 export const fontFamilies = {
-  display: 'PP Radio Grotesk, sans-serif',
-  body: 'PP Pangram Sans, sans-serif',
-  special: 'PP Eiko, sans-serif',
-  camelot: 'Inter, sans-serif',
+  display: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+  body: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+  special: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+  camelot: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
 };
 
 // Typography Styles
