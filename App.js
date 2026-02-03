@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Platform } from 'react-native';
 import KeysAndChordsMainScreen from './components/screens/KeysAndChordsMainScreen';
 import KeyDetailScreen from './components/screens/KeyDetailScreen';
 import LessonsMainScreen from './components/screens/LessonsMainScreen';
@@ -25,6 +25,17 @@ export default function App() {
   const [previousScreen, setPreviousScreen] = useState('keys-chords');
   const [selectedKey, setSelectedKey] = useState(null);
   const [showCamelotWheel, setShowCamelotWheel] = useState(false);
+
+  // Load Google Fonts for web
+  useEffect(() => {
+    if (Platform.OS === 'web') {
+      // Load Inter font from Google Fonts
+      const link = document.createElement('link');
+      link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    }
+  }, []);
 
   const handleKeySelect = (key) => {
     setSelectedKey(key);

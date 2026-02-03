@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import Svg, { Rect, Text as SvgText } from 'react-native-svg';
 import { colors } from '../../styles/colors';
+import { fontFamilies } from '../../styles/typography';
 
 const PianoKey = ({
   note,
@@ -72,7 +73,7 @@ const PianoKey = ({
             fill={labelColor}
             textAnchor="middle"
             fontWeight="400"
-            fontFamily="PP Pangram Sans"
+            fontFamily={fontFamilies.body}
           >
             {note}
           </SvgText>

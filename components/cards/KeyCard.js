@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import PianoRoll from '../piano/PianoRoll';
 import { GuitarNeckCompact } from '../guitar';
 import { colors, camelotColors } from '../../styles/colors';
-import { typography } from '../../styles/typography';
+import { typography, fontFamilies } from '../../styles/typography';
 import { spacing } from '../../styles/spacing';
 
 const KeyCard = ({
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     padding: spacing[16],
   },
   keyName: {
-    fontFamily: 'PP Radio Grotesk',
+    fontFamily: fontFamilies.display,
     fontSize: 14,
     fontWeight: '400',
     color: '#121111', // Slightly softer than pure black per Figma
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   label: {
-    fontFamily: 'PP Pangram Sans',
+    fontFamily: fontFamilies.body,
     fontSize: 10,
     color: colors.grey500, // #737272
     textAlign: 'center',
