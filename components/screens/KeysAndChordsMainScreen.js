@@ -6,6 +6,7 @@ import KeyCard from '../cards/KeyCard';
 import BottomNavigation from '../navigation/BottomNavigation';
 import PageHeader from '../ui/PageHeader';
 import InstrumentToggle from '../ui/InstrumentToggle';
+import SortOrderToggle from '../ui/SortOrderToggle';
 import keysData from '../../data/keys.json';
 
 const KeysAndChordsMainScreen = ({
@@ -16,31 +17,45 @@ const KeysAndChordsMainScreen = ({
   userProfile
 }) => {
   const [activeInstrument, setActiveInstrument] = useState('piano');
+  const [sortOrder, setSortOrder] = useState('alphabetical');
 
-  // Convert keys.json object to array and sort by chromatic order with major/minor pairs
+  // Convert keys.json object to array
   const keysArray = Object.values(keysData);
 
   // Define the chromatic order for sorting
   const chromaticOrder = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
 
-  // Sort keys: group by root note, then major before minor
-  const sortedKeys = keysArray.sort((a, b) => {
-    // Extract root note (e.g., "C Major" -> "C", "C# Minor" -> "C#")
-    const rootA = a.name.replace(' Major', '').replace(' Minor', '');
-    const rootB = b.name.replace(' Major', '').replace(' Minor', '');
+  // Sort keys based on selected sort order
+  const sortedKeys = [...keysArray].sort((a, b) => {
+    if (sortOrder === 'camelot') {
+      // Sort by Camelot number, then by type (minor before major for same number)
+      // This gives us: 1A, 1B, 2A, 2B, 3A, 3B, ..., 12A, 12B
+      if (a.camelotNumber !== b.camelotNumber) {
+        return a.camelotNumber - b.camelotNumber;
+      }
+      // Same camelot number: minor (A) comes before major (B)
+      if (a.type === 'minor' && b.type === 'major') return -1;
+      if (a.type === 'major' && b.type === 'minor') return 1;
+      return 0;
+    } else {
+      // Alphabetical: sort by root note, then major before minor
+      // This gives us: C Major, C Minor, C# Major, C# Minor, etc.
+      const rootA = a.name.replace(' Major', '').replace(' Minor', '');
+      const rootB = b.name.replace(' Major', '').replace(' Minor', '');
 
-    // Compare chromatic positions
-    const orderA = chromaticOrder.indexOf(rootA);
-    const orderB = chromaticOrder.indexOf(rootB);
+      // Compare chromatic positions
+      const orderA = chromaticOrder.indexOf(rootA);
+      const orderB = chromaticOrder.indexOf(rootB);
 
-    if (orderA !== orderB) {
-      return orderA - orderB;
+      if (orderA !== orderB) {
+        return orderA - orderB;
+      }
+
+      // Same root note: major comes before minor
+      if (a.type === 'major' && b.type === 'minor') return -1;
+      if (a.type === 'minor' && b.type === 'major') return 1;
+      return 0;
     }
-
-    // Same root note: major comes before minor
-    if (a.type === 'major' && b.type === 'minor') return -1;
-    if (a.type === 'minor' && b.type === 'major') return 1;
-    return 0;
   });
 
   const handleKeySelect = (key) => {
@@ -65,11 +80,15 @@ const KeysAndChordsMainScreen = ({
           userDisplayName={userProfile?.display_name}
         />
 
-        {/* Instrument Toggle */}
+        {/* Toggles */}
         <View style={styles.toggleContainer}>
           <InstrumentToggle
             activeInstrument={activeInstrument}
             onToggle={setActiveInstrument}
+          />
+          <SortOrderToggle
+            sortOrder={sortOrder}
+            onToggle={setSortOrder}
           />
         </View>
 
@@ -114,6 +133,7 @@ const styles = StyleSheet.create({
   toggleContainer: {
     paddingHorizontal: spacing[24],
     paddingTop: spacing[16],
+    gap: spacing[12],
   },
   keysGrid: {
     flexDirection: 'row',
